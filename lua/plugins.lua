@@ -33,4 +33,5 @@ packer.startup(function(use)
     "kylechui/nvim-surround",
     tag = "*",
   }
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
 end)

@@ -12,12 +12,7 @@ ts.setup {
   },
   ensure_installed = {
     "tsx",
-    "toml",
-    "fish",
-    "php",
     "json",
-    "yaml",
-    "swift",
     "css",
     "html",
     "lua"
@@ -25,6 +20,9 @@ ts.setup {
   autotag = {
     enable = true,
   },
+  context_commentstring = {
+    enable = true,
+  }
 }
 
 local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
