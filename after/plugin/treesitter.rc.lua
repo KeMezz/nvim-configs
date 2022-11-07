@@ -11,13 +11,14 @@ ts.setup {
     disable = {},
   },
   ensure_installed = {
-    "javascript",
-    "typescript",
-    "markdown",
     "tsx",
+    "toml",
+    "fish",
+    "php",
     "json",
+    "yaml",
+    "swift",
     "css",
-    "scss",
     "html",
     "lua"
   },
