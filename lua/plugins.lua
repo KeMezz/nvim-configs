@@ -34,4 +34,5 @@ packer.startup(function(use)
     tag = "*",
   }
   use 'JoosepAlviste/nvim-ts-context-commentstring'
+  use 'terrortylor/nvim-comment'
 end)
