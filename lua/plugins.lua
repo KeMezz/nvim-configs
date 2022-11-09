@@ -35,4 +35,9 @@ packer.startup(function(use)
   }
   use 'JoosepAlviste/nvim-ts-context-commentstring'
   use 'terrortylor/nvim-comment'
+  use { 'nvim-telescope/telescope.nvim', requires = { { 'nvim-lua/plenary.nvim' } } }
+  use 'nvim-telescope/telescope-file-browser.nvim'
+  use 'norcalli/nvim-colorizer.lua'
+  use 'nvim-tree/nvim-web-devicons'
+  use 'themaxmarchuk/tailwindcss-colors.nvim'
 end)

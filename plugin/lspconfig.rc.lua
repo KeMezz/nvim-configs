@@ -1,7 +1,7 @@
 local status, nvim_lsp = pcall(require, 'lspconfig')
 if (not status) then return end
 
-local protocol = require('vim.lsp.protocol')
+-- local protocol = require('vim.lsp.protocol')
 
 local on_attach = function(client, bufnr)
   -- formatting
@@ -11,6 +11,7 @@ local on_attach = function(client, bufnr)
     vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
     vim.api.nvim_command [[augroup END]]
   end
+  require('tailwindcss-colors').buf_attach(bufnr)
 end
 
 nvim_lsp.tsserver.setup {
@@ -37,4 +38,6 @@ nvim_lsp.sumneko_lua.setup {
   }
 }
 
-nvim_lsp.tailwindcss.setup {}
+nvim_lsp.tailwindcss.setup {
+  on_attach = on_attach
+}
