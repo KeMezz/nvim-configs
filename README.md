@@ -5,10 +5,14 @@
 
 ## Prerequisites
 ```sh
-brew install treesitter lua-language-server
+brew install tree-sitter lua-language-server
 ```
 
 ```sh
 npm install -g typescript typescript-language-server @tailwindcss/language-server
 ```
 
+```sh
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+```
