@@ -30,7 +30,7 @@ packer.startup(function(use)
   use 'windwp/nvim-ts-autotag'
   use { 'neoclide/coc.nvim', branch = 'release' }
   use {
-    "kylechui/nvim-surround",
+    'kylechui/nvim-surround',
     tag = "*",
   }
   use 'JoosepAlviste/nvim-ts-context-commentstring'
@@ -40,4 +40,9 @@ packer.startup(function(use)
   use 'norcalli/nvim-colorizer.lua'
   use 'nvim-tree/nvim-web-devicons'
   use 'themaxmarchuk/tailwindcss-colors.nvim'
+  use 'akinsho/bufferline.nvim'
+  use 'glepnir/lspsaga.nvim'
+  use { 'jose-elias-alvarez/null-ls.nvim', requires = { { 'nvim-lua/plenary.nvim' } } } -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
+  use 'lewis6991/gitsigns.nvim'
+  use 'dinhhuy258/git.nvim'
 end)
