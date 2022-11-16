@@ -45,4 +45,5 @@ packer.startup(function(use)
   use { 'jose-elias-alvarez/null-ls.nvim', requires = { { 'nvim-lua/plenary.nvim' } } } -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
   use 'lewis6991/gitsigns.nvim'
   use 'dinhhuy258/git.nvim'
+  use 'lukas-reineke/indent-blankline.nvim'
 end)
