@@ -1,4 +1,5 @@
 local status, nvim_lsp = pcall(require, 'lspconfig')
+local capabilities = vim.lsp.protocol.make_client_capabilities()
 if (not status) then return end
 
 -- local protocol = require('vim.lsp.protocol')
@@ -41,3 +42,17 @@ nvim_lsp.sumneko_lua.setup {
 nvim_lsp.tailwindcss.setup {
   on_attach = on_attach
 }
+
+nvim_lsp.emmet_ls.setup({
+  -- on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { 'html', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less' },
+  init_options = {
+    html = {
+      options = {
+        -- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
+        ["bem.enabled"] = true,
+      },
+    },
+  }
+})
